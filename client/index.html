@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long polling chat</title>
+</head>
+<body>
+    <input id='message' type="text">
+    <button id='sendBtn'>send</button>
+    <div id='content'></div>
+    
+    <script>
+        const input = document.querySelector('#message');
+        const button = document.querySelector('#sendBtn');
+        const content = document.querySelector('#content');
+
+        button.addEventListener('click', () => {
+            const newMessage = document.createElement('div');
+            newMessage.textContent = input.value;
+
+            content.appendChild(newMessage);
+        })
+    </script>
+</body>
+</html>
